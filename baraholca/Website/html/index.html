@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <title></title>
+</head>
+<body>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Home Page</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><p><a class="navbar-text" href="#">Already have an account?</a></p></li>
+                    <li><p><a class="navbar-text" href="#" data-toggle="modal" data-target="#contact"><b>Login</b></a></p></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <div class="modal fade" id="contact" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Login</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Login:</h3>
+                    <input class="form-control" type="text" name="un">
+                    <h3>Password:</h3>
+                    <input class="form-control" type="password" name="pw">
+                </div>
+                <div class="modal-footer">
+                    <button id="cont" type="button" class="btn btn-success">Continue</button>
+                    <button id="canc" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-4"></div>
+            <div class="col-lg-4 col-md-4">
+                <div class="col-md-8 text-right">
+                    <input type="text" class="form-control" placeholder="Find what you need">
+                </div>
+                <div class="col-md-4 text-left">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-4"></div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
