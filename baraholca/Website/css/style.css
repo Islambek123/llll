@@ -66,13 +66,3 @@ body {
                 padding-bottom: 10px;
             }
 }
-.background-chain {
-    background-color: red;
-        padding-right: 15px;
-        padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 900px;
-    overflow: hidden;
-    min-height: 0px !important;
-}

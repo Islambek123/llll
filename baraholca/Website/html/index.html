@@ -27,12 +27,14 @@
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                 </ul>
+
                 <ul class="nav navbar-nav navbar-right">
-                    <li><p><a class="navbar-text" href="../html/registration.html">Already have an account?</a></p></li>
-                    <li><p><a class="navbar-text" href="#" data-toggle="modal" data-target="#contact" ><b>Login</b></a></p></li>
+                    <li><p><a class="navbar-text" href="#">Already have an account?</a></p></li>
+                    <li><p><a class="navbar-text" href="#" data-toggle="modal" data-target="#contact"><b>Login</b></a></p></li>
+                    <li><p><h4 class="navbar-text" id="target" ></h4></p></li>
                 </ul>
-            </div>
-        </div>    
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
     </div>
     <div class="modal fade" id="contact" role="dialog">
         <div class="modal-dialog">
@@ -42,35 +44,75 @@
                 </div>
                 <div class="modal-body">
                     <h3>Login:</h3>
-                    <input class="form-control" type="text" name="un">
+                    <input class="form-control" type="text" name="un" id="un">
                     <h3>Password:</h3>
-                    <input class="form-control" type="password" name="pw">
+                    <input class="form-control" type="password" name="pw" id="pw">
                 </div>
                 <div class="modal-footer">
-                    <button id="cont" type="button" class="btn btn-success">Continue</button>
+                    <button id="cont" type="button" onclick="send()" class="btn btn-success">Continue</button>
                     <button id="canc" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid background-chain">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-4 col-md-4">
+            <div class="col-lg-4 col-md-4"></div>
+            <div class="col-lg-4 col-md-4">
                 <div class="col-md-8 text-right">
                     <input type="text" class="form-control" placeholder="Find what you need">
                 </div>
                 <div class="col-md-4 text-left">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-lg-offset-4 col-md-4">
-                
-            </div>
+            <div class="col-lg-4 col-md-4"></div>
         </div>
     </div>
-    
+    <script type="text/javascript">
+        function send() {
+
+            var userLogin = {
+                Email: $("#un").val(),
+                Password: $("#pw").val()
+            };
+
+            $.ajax({
+                url: 'http://localhost:1923/Login/Login',
+                type: 'post',
+                dataType: 'json',
+                cache: false,
+                xhrFields: {
+                    withCredentials: true
+                },
+                success: function (data) {
+                    if (data.Auth)
+                        alert("Ви увійшли");
+                    else
+                        alert("Логін чи пароль вказано невірно");
+                },
+                data: userLogin
+            });
+            return false;
+        }
+        function getUserLogin() {
+            $.ajax({
+                url: 'http://localhost:1923/Login/UserLogin',
+                type: 'get',
+                dataType: 'json',
+                cache: false,
+                xhrFields: {
+                    withCredentials: true
+                },
+                success: function (data) {
+                    $('#target').innerHTML= data.UserLogin;
+                    $('#target').html(data.Auth);
+                }
+            });
+            return false;
+        }
+    </script>
     <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
