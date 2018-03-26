@@ -3,7 +3,7 @@ namespace DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Rot : DbMigration
+    public partial class sd1 : DbMigration
     {
         public override void Up()
         {

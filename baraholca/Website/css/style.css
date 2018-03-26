@@ -26,8 +26,17 @@
     .navbar-default .navbar-nav > li > a {
         color: antiquewhite;
     }
-
-body {
+#listing li{
+    float:left;
+    margin-left:10px;
+}
+#listing p.addProduct {
+    background-image: url('../assets/city.jpg');
+    display: inline-block;
+    height:40px;
+    width: 20px;
+}
+    body {
     background-image: url('../assets/city.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,4 +74,14 @@ body {
                 padding-top: 10px;
                 padding-bottom: 10px;
             }
+}
+ul
+{
+    list-style-type: none;
+}
+.categoryList > li > img
+{
+   border-radius: 50%;
+   width: 42px;
+   height: 42px;
 }

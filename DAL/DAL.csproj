@@ -65,12 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\Category.cs" />
     <Compile Include="Entity\EFContext.cs" />
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Entity\User.cs" />
-    <Compile Include="Migrations\201803201427015_Rot.cs" />
-    <Compile Include="Migrations\201803201427015_Rot.Designer.cs">
-      <DependentUpon>201803201427015_Rot.cs</DependentUpon>
+    <Compile Include="Migrations\201803231812384_sd1.cs" />
+    <Compile Include="Migrations\201803231812384_sd1.Designer.cs">
+      <DependentUpon>201803231812384_sd1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -81,12 +82,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803201427015_Rot.resx">
-      <DependentUpon>201803201427015_Rot.cs</DependentUpon>
-    </EmbeddedResource>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <EmbeddedResource Include="Migrations\201803231812384_sd1.resx">
+      <DependentUpon>201803231812384_sd1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
